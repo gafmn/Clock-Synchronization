@@ -45,8 +45,7 @@ def process_one(pipe12):
     counter = event(pid, counter)
     counter = event(pid, counter)
     counter = recv_message(pipe12, pid, counter)
-    print('FINAL STATE COUNTER of process A')
-    print(counter)
+    print('FINAL STATE COUNTER of process A: ', counter)
 
 
 def process_two(pipe21, pipe23):
@@ -60,8 +59,7 @@ def process_two(pipe21, pipe23):
     counter = send_message(pipe21, pid, counter)
     counter = send_message(pipe23, pid, counter)
     counter = send_message(pipe23, pid, counter)
-    print('FINAL STATE COUNTER of process B')
-    print(counter)
+    print('FINAL STATE COUNTER of process B: ', counter)
 
 
 def process_three(pipe32):
@@ -71,8 +69,7 @@ def process_three(pipe32):
     counter = recv_message(pipe32, pid, counter)
     counter = event(pid, counter)
     counter = recv_message(pipe32, pid, counter)
-    print('FINAL STATE COUNTER of process C')
-    print(counter)
+    print('FINAL STATE COUNTER of process C: ', counter)
 
 
 if __name__ == '__main__':
